@@ -9,12 +9,10 @@ def pointless_sort(x):
     """
     return np.array([1,2,3])
 
-def bubblesort(x):
+def bubblesort(l):
     """
     Describe how you are sorting `x`
     """
-    # assert 1 == 1
-    # return x
 
     # define counters for assignments & conditionals #
     asn = 0
@@ -32,12 +30,10 @@ def bubblesort(x):
                 asn += 1 # assignment counter
     return asn, con # get counts for assignments and conditionals
 
-def quicksort(x):
+def quicksort(l):
     """
     Describe how you are sorting `x`
     """
-    # assert 1 == 1
-    # return x
 
     # define counters for assignments & conditionals #
     asn = 0
@@ -70,3 +66,10 @@ def quicksort(x):
     if (m < right):
         quickSort(l, m, right)
     return asn, con # get counts for assignments and conditionals
+
+# the main subroutine runs both sorting algorithms and return the results for a vector l #
+def main(l):
+    asnb, conb = bubbleSort(l)
+    asnq, conq = quickSort(l, 0, int(len(l)-1))
+    print(l, "\n%s and %s are assignments and conditionals for bubbleSort, respectively.\n" %(asnb, conb))
+    print(l, "\n%s and %s are assignments and conditionals for quickSort, respectively.\n" %(asnq, conq))
