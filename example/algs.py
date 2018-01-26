@@ -31,8 +31,8 @@ def quicksort(l):
 
     left = 0
     right = int(len(l)-1
-    asn = 0     # define counters for assignments & conditionals
-    con = 0
+    acount = 0     # define counters for assignments & conditionals
+    ccount = 0
     # # conditions for sorting #
     # if len(l) != 0:
     # actual sorting #
@@ -40,27 +40,27 @@ def quicksort(l):
     n = right
     pivot = l[int((left + right)/2)] # define the pivot point
     while m <= n:
-        con += 1
+        ccount += 1
         while l[m] < pivot:
             m += 1
-            con += 1 # conditional counter
+            ccount += 1 # conditional counter
         while l[n] > pivot:
             n -= 1
-            con += 1 # conditional counter
+            ccount += 1 # conditional counter
         if m <= n:
             tmp = l[m]
             l[m] = l[n]
             l[n] = tmp
             m += 1
             n -= 1
-            asn += 1 # assignment counter
-            con += 1 # conditional counter
+            acount += 1 # assignment counter
+            ccount += 1 # conditional counter
     # recursive bit #
     if left < n:
         quickSort(l, left, n)
     if (m < right):
         quickSort(l, m, right)
-    return asn, con # get counts for assignments and conditionals
+    return acount, ccount # get counts for assignments and conditionals
 
 # the main subroutine runs both sorting algorithms and return the results for a vector l #
 def main(l):
