@@ -37,10 +37,10 @@ def test_single():
 def test_duplicated():
     # generate random vector containing 100 elements
     x = np.random.rand(1, 100)
-    x.tolist()
+    y = x.tolist()
     # add 2 identical elements to it (duplicates)
-    x.extend([9,9])
-    algs.main(x)
+    y.extend([9,9])
+    algs.main(y)
 
 def odd_even():
     # generate random vector containing 99 elements
