@@ -38,8 +38,8 @@ def test_duplicated():
     # generate random vector containing 100 elements
     x = np.random.rand(1, 100)
     y = x.tolist()
-    # add 2 identical elements to it (duplicates)
-    y.extend([9,9])
+    # add the first element to the list again (duplicate it)
+    y.append(y[1])
     algs.main(y)
 
 def odd_even():
