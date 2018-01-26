@@ -58,14 +58,14 @@ def quicksort(l):
             ccount += 1 # conditional counter
     # recursive bit #
     if left < n:
-        quickSort(l, left, n)
+        quicksort(l, left, n)
     if (m < right):
-        quickSort(l, m, right)
+        quicksort(l, m, right)
     return acount, ccount # get counts for assignments and conditionals
 
 # the main subroutine runs both sorting algorithms and return the results for a vector l #
 def main(l):
-    asnb, conb = bubbleSort(l)
-    asnq, conq = quickSort(l, 0, int(len(l)-1))
+    asnb, conb = bubblesort(l)
+    asnq, conq = quicksort(l)
     print(l, "\n%s and %s are assignments and conditionals for bubbleSort, respectively.\n" %(asnb, conb))
     print(l, "\n%s and %s are assignments and conditionals for quickSort, respectively.\n" %(asnq, conq))
