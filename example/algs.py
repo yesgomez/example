@@ -31,7 +31,7 @@ def quicksort(l):
 
     left = 0
     right = int(len(l)-1
-    # define counters for assignments & conditionals 
+    # define counters for assignments & conditionals
     asn = 0
     con = 0
     # # conditions for sorting #
