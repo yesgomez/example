@@ -2,25 +2,51 @@ import numpy as np
 from example import algs
 
 def test_pointless_sort():
-    # generate random vector of length 10
-    x = np.random.rand(100)
-    # check that pointless_sort always returns [1,2,3]
-    assert np.array_equal(algs.pointless_sort(x), np.array([1,2,3]))
-    # generate a new random vector of length 10
+    # generate a new random vector of length 100
     x = np.random.rand(100)
     # check that pointless_sort still returns [1,2,3]
     assert np.array_equal(algs.pointless_sort(x), np.array([1,2,3]))
 
-def test_bubblesort():
-    # Actually test bubblesort here. It might be useful to think about
-    # some edge cases for your code, where it might fail. Some things to
-    # think about: (1) does your code handle 0-element arrays without
-    # failing, (2) does your code handle characters?
+# generic tests for algorithm logic #
 
+def test_bubblesort():
+    # generate random vector of length 100
     x = np.random.rand(100)
     algs.bubblesort(x)
 
 def test_quicksort():
-
+    # generate random vector of length 100
     x = np.random.rand(100)
     algs.quicksort(x, 0, int(len(x)-1))
+
+def test_main():
+    # generate random vector of length 100
+    x = np.random.rand(100)
+    algs.main(x)
+
+# testing specific edge cases #
+
+# def test_empty():
+#     # generate random vector of length 0
+#     x = np.empty([1,1])
+#     main(x) # check if it fails if the vector is empty
+#
+# def test_single():
+#     # generate random vector containing 1 element
+#     x = np.random.rand(1,1)
+#     main(x)
+#
+# def test_duplicated():
+#     # generate random vector containing 100 elements
+#     x = np.random.rand(1, 100)
+#     # add 2 identical elements to it (duplicates)
+#     x.extend([9,9])
+#     main(x)
+#
+# def odd_even():
+#     # generate random vector containing 99 elements
+#     x = np.random.rand(1, 99)
+#     main(x)
+#     # generate random vector containing 999 elements
+#     x = np.random.rand(1, 999)
+#     main(x)
