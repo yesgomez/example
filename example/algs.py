@@ -13,14 +13,60 @@ def bubblesort(x):
     """
     Describe how you are sorting `x`
     """
+    # assert 1 == 1
+    # return x
 
-    assert 1 == 1
-    return x
+    # define counters for assignments & conditionals #
+    asn = 0
+    con = 0
+    # # conditions for sorting #
+    # if len(l) != 0:
+    # actual sorting #
+    for passnum in range(0,len(l)-1,1):
+        for i in range(passnum):
+            con += 1 # conditional counter
+            if l[i]>l[i+1]:
+                temp = l[i]
+                l[i] = l[i+1]
+                l[i+1] = temp
+                asn += 1 # assignment counter
+    return asn, con # get counts for assignments and conditionals
 
 def quicksort(x):
     """
     Describe how you are sorting `x`
     """
+    # assert 1 == 1
+    # return x
 
-    assert 1 == 1
-    return
+    # define counters for assignments & conditionals #
+    asn = 0
+    con = 0
+    # # conditions for sorting #
+    # if len(l) != 0:
+    # actual sorting #
+    m = left
+    n = right
+    pivot = l[int((left + right)/2)] # define the pivot point
+    while m <= n:
+        con += 1
+        while l[m] < pivot:
+            m += 1
+            con += 1 # conditional counter
+        while l[n] > pivot:
+            n -= 1
+            con += 1 # conditional counter
+        if m <= n:
+            tmp = l[m]
+            l[m] = l[n]
+            l[n] = tmp
+            m += 1
+            n -= 1
+            asn += 1 # assignment counter
+            con += 1 # conditional counter
+    # recursive bit #
+    if left < n:
+        quickSort(l, left, n)
+    if (m < right):
+        quickSort(l, m, right)
+    return asn, con # get counts for assignments and conditionals
