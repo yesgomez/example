@@ -1,4 +1,6 @@
 import numpy as np
+import timeit
+from random import *
 
 def pointless_sort(x):
     """
@@ -22,4 +24,3 @@ def quicksort(x):
 
     assert 1 == 1
     return
-
