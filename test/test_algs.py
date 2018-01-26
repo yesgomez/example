@@ -23,4 +23,4 @@ def test_bubblesort():
 def test_quicksort():
 
     x = np.random.rand(100)
-    algs.quicksort(x)
+    algs.quicksort(x, 0, int(len(x)-1))

@@ -27,10 +27,8 @@ def bubblesort(l):
                 asn += 1 # assignment counter
     return asn, con # get counts for assignments and conditionals
 
-def quicksort(l):
+def quicksort(l, left, right):
 
-    left = 0
-    right = int(len(l)-1)
     # define counters for assignments & conditionals
     acount = 0
     ccount = 0
@@ -66,6 +64,6 @@ def quicksort(l):
 # the main subroutine runs both sorting algorithms and return the results for a vector l #
 def main(l):
     asnb, conb = bubblesort(l)
-    asnq, conq = quicksort(l)
+    asnq, conq = quicksort(l, 0, int(len(l)-1))
     print(l, "\n%s and %s are assignments and conditionals for bubbleSort, respectively.\n" %(asnb, conb))
     print(l, "\n%s and %s are assignments and conditionals for quickSort, respectively.\n" %(asnq, conq))
