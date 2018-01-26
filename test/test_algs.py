@@ -27,24 +27,25 @@ def test_pointless_sort():
 def test_empty():
     # generate random vector of length 0
     x = np.empty([1,1])
-    main(x) # check if it fails if the vector is empty
+    algs.main(x) # check if it fails if the vector is empty
 
 def test_single():
     # generate random vector containing 1 element
     x = np.random.rand(1,1)
-    main(x)
+    algs.main(x)
 
 def test_duplicated():
     # generate random vector containing 100 elements
     x = np.random.rand(1, 100)
+    x.tolist()
     # add 2 identical elements to it (duplicates)
     x.extend([9,9])
-    main(x)
+    algs.main(x)
 
 def odd_even():
     # generate random vector containing 99 elements
     x = np.random.rand(1, 99)
-    main(x)
+    algs.main(x)
     # generate random vector containing 999 elements
     x = np.random.rand(1, 999)
-    main(x)
+    algs.main(x)
