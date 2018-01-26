@@ -10,11 +10,8 @@ def pointless_sort(x):
     return np.array([1,2,3])
 
 def bubblesort(l):
-    """
-    Describe how you are sorting `x`
-    """
 
-    # define counters for assignments & conditionals #
+    # define counters for assignments & conditionals
     asn = 0
     con = 0
     # # conditions for sorting #
@@ -34,7 +31,7 @@ def quicksort(l):
 
     left = 0
     right = int(len(l)-1
-    # define counters for assignments & conditionals #
+    # define counters for assignments & conditionals 
     asn = 0
     con = 0
     # # conditions for sorting #
