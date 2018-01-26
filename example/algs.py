@@ -31,10 +31,9 @@ def bubblesort(l):
     return asn, con # get counts for assignments and conditionals
 
 def quicksort(l):
-    """
-    Describe how you are sorting `x`
-    """
 
+    left = 0
+    right = int(len(l)-1
     # define counters for assignments & conditionals #
     asn = 0
     con = 0
