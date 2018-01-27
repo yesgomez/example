@@ -25,14 +25,16 @@ def bubblesort(l):
                 asn += 1 # assignment counter
     return asn, con # get counts for assignments and conditionals
 
+acount = 0
+ccount = 0
 def quicksort(l, left, right):
+    # define counters for assignments & conditionals
+    global acount
+    global ccount
+    print (acount, ccount)
     # setting left and right #
     m = left
     n = right
-    # define counters for assignments & conditionals
-    if m is 0:
-        acount = 0
-        ccount = 0
     # actual sorting #
     pivot = l[int((left + right)/2)] # define the pivot point
     while m <= n:
