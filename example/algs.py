@@ -1,5 +1,4 @@
 import numpy as np
-import timeit
 from random import *
 
 def pointless_sort(x):
