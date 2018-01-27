@@ -28,8 +28,8 @@ def plot_stuff(data, title, comp):
     for ea in data: # split the array into x and y values for plotting
         y.append(ea[0])
         z.append(ea[1])
-    plt.plot(x, y, 'r') # plot with specified color
-    plt.plot(x, z, 'g')
+    plt.plot(x, y, 'c', label='assignments') # plot with specified color
+    plt.plot(x, z, 'c--', label='conditionals')
     plt.title(title)
     # adding comparison plot
     if comp is 'n2':
@@ -40,7 +40,8 @@ def plot_stuff(data, title, comp):
         n = m * np.log(m)
     else:
         print ("no such line available... yet")
-    plt.plot(m, n, 'r--')
+    plt.plot(m, n, 'b', label='expected big O')
+    plt.legend()
     plt.show()
 
 plot_stuff(bdata, 'BubbleSort', 'n2')
