@@ -8,20 +8,20 @@ def test_pointless_sort():
     assert np.array_equal(algs.pointless_sort(x), np.array([1,2,3]))
 
 # generic tests for algorithm logic #
-# def test_bubblesort():
-#     # generate random vector of length 100
-#     x = np.random.rand(100)
-#     algs.bubblesort(x)
-#
-# def test_quicksort():
-#     # generate random vector of length 100
-#     x = np.random.rand(100)
-#     algs.quicksort(x, 0, int(len(x)-1))
-#
-# def test_main():
-#     # generate random vector of length 100
-#     x = np.random.rand(100)
-#     algs.main(x)
+def test_bubblesort():
+    # generate random vector of length 100
+    x = np.random.rand(100)
+    algs.bubblesort(x)
+
+def test_quicksort():
+    # generate random vector of length 100
+    x = np.random.rand(100)
+    algs.quicksort(x, 0, int(len(x)-1))
+
+def test_main():
+    # generate random vector of length 100
+    x = np.random.rand(100)
+    algs.main(x)
 
 # testing specific edge cases #
 def test_empty():
