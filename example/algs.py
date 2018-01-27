@@ -10,17 +10,16 @@ def pointless_sort(x):
     return np.array([1,2,3])
 
 def bubblesort(l):
-
     # define counters for assignments & conditionals
     asn = 0
     con = 0
-    # # conditions for sorting #
-    # if len(l) != 0:
     # actual sorting #
     for passnum in range(0,len(l)-1,1):
+        con += 1 # conditional counter
         for i in range(passnum):
             con += 1 # conditional counter
             if l[i]>l[i+1]:
+                con += 1 # conditional counter
                 temp = l[i]
                 l[i] = l[i+1]
                 l[i+1] = temp
@@ -28,12 +27,9 @@ def bubblesort(l):
     return asn, con # get counts for assignments and conditionals
 
 def quicksort(l, left, right):
-
     # define counters for assignments & conditionals
     acount = 0
     ccount = 0
-    # # conditions for sorting #
-    # if len(l) != 0:
     # actual sorting #
     m = left
     n = right
@@ -67,3 +63,4 @@ def main(l):
     asnq, conq = quicksort(l, 0, int(len(l)-1))
     print(l, "\n%s and %s are assignments and conditionals for bubbleSort, respectively.\n" %(asnb, conb))
     print(l, "\n%s and %s are assignments and conditionals for quickSort, respectively.\n" %(asnq, conq))
+    return asnb, conb, asnq, conq

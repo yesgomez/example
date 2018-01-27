@@ -1,16 +1,22 @@
 # this file is only called when the package is called from the command line
 import numpy as np
-from .algs import quicksort, bubblesort, main
+from example import algs
+# from .algs import quicksort, bubblesort, main
 
 def run_stuff():
+    print("This is run_stuff() from ", __file__)
+    lengths = np.arange(100,1100,100)
+    bcounts = []
+    qcounts = []
+    for le in lengths:
+        x = np.random.rand(le)
+        print("Unsorted input:\n", x, "\n")
+        ab, cb, aq, cq = algs.main(x)
+        bcounts.append([ab, cb])
+        qcounts.append([aq, cq])
+    return bcounts, qcounts
 
-    print("This is `run()` from ", __file__)
+bdata, qdata = run_stuff()
+print ("The counts for each algorithm are ", bdata, qdata)
 
-    x = np.random.rand(100)
-    print("Unsorted input: ", x)
-
-    # print("Bubble sort output: ", bubblesort(x))
-    # print("Quick sort output: ", quicksort(x))
-    print("Unsorted input: ", main(x))
-
-run_stuff()
+# def plot_stuff():
