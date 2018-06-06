@@ -31,7 +31,6 @@ def quicksort(l, left, right):
     # define counters for assignments & conditionals
     global acount
     global ccount
-    print (acount, ccount)
     # setting left and right #
     m = left
     n = right
