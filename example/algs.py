@@ -9,6 +9,10 @@ def pointless_sort(x):
     return np.array([1,2,3])
 
 def bubblesort(l):
+    """
+    This function sorts the list (L = n) by comparing adjacent
+	elements pairwise. It goes through the list (n-1) times.
+    """
     # define counters for assignments & conditionals
     asn = 0
     con = 0
@@ -28,6 +32,10 @@ def bubblesort(l):
 acount = 0
 ccount = 0
 def quicksort(l, left, right):
+	"""
+    This function sorts the list (L = n) by successively splitting
+	the list
+    """
     # define counters for assignments & conditionals
     global acount
     global ccount
@@ -45,9 +53,9 @@ def quicksort(l, left, right):
             n -= 1
             ccount += 1 # conditional counter
         if m <= n:
-            tmp = l[m]
-            l[m] = l[n]
-            l[n] = tmp
+            # tmp = l[m]
+            l[m], l[n] = l[n], l[m]
+            # l[n] = tmp
             m += 1
             n -= 1
             acount += 1 # assignment counter

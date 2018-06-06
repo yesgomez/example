@@ -1,12 +1,6 @@
 import numpy as np
 from example import algs
 
-def test_pointless_sort():
-    # generate a new random vector of length 100
-    x = np.random.rand(100)
-    # check that pointless_sort still returns [1,2,3]
-    assert np.array_equal(algs.pointless_sort(x), np.array([1,2,3]))
-
 # generic tests for algorithm logic #
 def test_bubblesort():
     # generate random vector of length 100
