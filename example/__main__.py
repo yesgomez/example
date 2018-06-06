@@ -47,4 +47,4 @@ def plot_stuff(data, title, comp):
 plot_stuff(bdata, 'BubbleSort', 'n2')
 plot_stuff(qdata, 'QuickSort', 'nlogn')
 
-# Trivial change
+# Another trivial change
