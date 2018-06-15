@@ -6,6 +6,7 @@ def test_bubblesort():
     # generate random vector of length 100
     x = np.random.rand(100)
     algs.bubblesort(x)
+	for 
 
 def test_quicksort():
     # generate random vector of length 100
