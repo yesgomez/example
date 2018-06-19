@@ -1,0 +1,8 @@
+[
+  "test/test_algs.py::test_bubblesort",
+  "test/test_algs.py::test_quicksort",
+  "test/test_algs.py::test_main",
+  "test/test_algs.py::test_empty",
+  "test/test_algs.py::test_single",
+  "test/test_algs.py::test_duplicated"
+]
