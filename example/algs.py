@@ -48,17 +48,17 @@ def quicksort(l, left, right):
 	n = right
 	# actual sorting 
 	pivot = l[int((left + right)/2)] # define the pivot point
+	ccount += 1
 	while m <= n:
-		ccount += 1
+		# ccount += 1 # conditional counter
 		while l[m] < pivot:
-			ccount += 1 # conditional counter
 			m += 1
 			acount += 1 # assignment counter
+		# ccount += 1 # conditional counter
 		while l[n] > pivot:
-			ccount += 1 # conditional counter
 			n -= 1
 			acount += 1 # assignment counter
-		# ccount += 1 # conditional counter
+		ccount += 1 # conditional counter
 		if m <= n:
 			l[m], l[n] = l[n], l[m]
 			m += 1

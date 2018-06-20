@@ -18,8 +18,8 @@ def run_stuff():
 	return bcounts, qcounts
 
 bdata, qdata = run_stuff()
-print ("The results for bubblesort are\n", pd.DataFrame(bdata, index=[np.arange(100,1100,100)], columns=['assignments', 'conditionals', 'dt']))
-print ("The results for quicksort are\n", pd.DataFrame(qdata, index=[np.arange(100,1100,100)], columns=['assignments', 'conditionals', 'dt']))
+print ("The results for bubblesort are\n", pd.DataFrame(bdata, index=[np.arange(100,1100,100)], columns=['assignments', 'conditionals']))
+print ("The results for quicksort are\n", pd.DataFrame(qdata, index=[np.arange(100,1100,100)], columns=['assignments', 'conditionals']))
 
 def plot_stuff(data, title, comp):
 	x = np.arange(100,1100,100)
@@ -40,7 +40,7 @@ def plot_stuff(data, title, comp):
 		n = m**2
 	elif comp is 'nlogn':
 		m = np.arange(100,1100,100) # define nlogn
-		n = m * np.log(m)
+		n = m * np.log(m) * 10
 	else:
 		print ("no such line available... yet")
 	plt.plot(m, n, 'b', label='expected big O')

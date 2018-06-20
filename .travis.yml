@@ -15,7 +15,7 @@ dist: trusty
 python:
     - "3.6"
 
-# only run travis on the master branch
+# only run travis on specified branches
 branches:
     only:
         - master
